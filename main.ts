@@ -6,12 +6,14 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-// The joke: a corn pun with a straight face, told the way a father
-// would tell it across the dinner table — setup, groan, punchline.
-// Three puns stacked on one word (corny, a-maize-ing, kernel) so the
-// turn lands cleanly and the groan is earned, not explained.
+// The joke: a construction joke with a straight face, told the way a
+// father would tell it across the dinner table — setup, refusal, then
+// the punchline anyway. "I'm still working on it" is a double turn:
+// working on the joke itself, and working on the construction.
+// One clean pun, landing at the very end, so the groan is earned
+// and the setup never gives the turn away.
 const LINE =
-  "My wife says my puns are corny. I told her that's a-maize-ing — I was just getting to the kernel of the joke.";
+  "I asked my son if he wanted to hear a joke about construction. He said no. I told him anyway — I'm still working on it.";
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 mkdirSync(outDir, { recursive: true });
