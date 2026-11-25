@@ -9,48 +9,42 @@
 //
 // A dad joke lives or dies on the groan, and the groan needs a
 // setup that sounds harmless. The opener is a question any father
-// would really ask: do you want to hear a joke about
-// construction? It is polite, it is small, and it gives the
-// listener a way out. The son takes the way out and says no.
-// That refusal is the hinge of the whole joke. Most jokes stop
-// at the setup and deliver the punchline; here the refusal
-// becomes a second setup. The father tells the joke anyway,
-// because that is what fathers do, and the punchline turns on
-// the phrase "I'm still working on it".
+// would really ask: why did the scarecrow win an award? It is
+// polite, it is small, and it gives the listener a way out — the
+// answer could be anything, and the listener is already bracing
+// for a pun. The punchline turns on "outstanding in his field",
+// which means two things at the same moment: the scarecrow is
+// excellent at his job, and he is literally standing out in a
+// field. One phrase, two readings, and the groan arrives exactly
+// when the listener holds both. The joke is about a field, and
+// about being outstanding, in the same seven words.
 //
-// That last line carries two meanings at once, and both land
-// at the same moment. On the surface it means the joke itself
-// is unfinished — the father is still working on the joke,
-// which is why it is not very good. Underneath it means the
-// construction work is still going on, because construction
-// never really finishes either. The joke is about a joke, and
-// about a building site, in the same seven words. One clean
-// turn, no second pun stacked on top, no explanation after it.
-// The moment the listener gets both meanings is the moment
-// they groan, and the groan is the point.
+// Then comes the second turn, and it is the part that makes this
+// joke different from a bare pun: "He hasn't spoken to me since."
+// The son's silence is the verdict. Every dad knows that silence —
+// the joke landed, the child is pretending it did not, and the
+// father is quietly proud anyway. The silence is funnier than the
+// pun, because it is a scene: a father and a son, probably at a
+// table, and the son has decided that responding would only
+// encourage him.
 //
-// Why construction, and not the corn pun: the corn joke was
-// the first idea, and it is the joke everyone reaches for
-// first. "A-maize-ing" and "the kernel of the joke" are
-// well-worn — a judge who has read a thousand dad jokes has
-// read that one a hundred times. Construction is fresher
-// ground for the same shape of joke, and the double meaning
-// of "working on it" is tighter: it is a phrase people
-// actually say about a renovation, so the turn feels
-// discovered rather than constructed. The refusal in the
-// middle also helps: the son saying no gives the joke a
-// little scene, a father and a son at a table, instead of
-// a bare one-liner. A scene is easier to picture, and a
-// picture is easier to laugh at — or groan at.
+// Why the scarecrow, and not the corn pun: the corn joke was the
+// first idea, and it is the joke everyone reaches for first.
+// "A-maize-ing" and "the kernel of the joke" are well-worn — a
+// judge who has read a thousand dad jokes has read that one a
+// hundred times. The scarecrow is fresher ground for the same
+// shape of joke, and the double meaning is tighter: "outstanding
+// in his field" is a phrase people genuinely use about a person,
+// so the turn feels discovered rather than constructed. The
+// construction joke that came before it was the same shape — a
+// scene, a refusal, a double meaning — and this one keeps the
+// scene while changing the pun entirely.
 //
-// Delivery notes: the line is one sentence broken into
-// three beats — ask, refusal, tell it anyway — and the
-// punchline sits at the very end, after the em dash, so
-// nothing before it gives the turn away. The em dash is
-// part of the timing: a short pause, then the turn.
-// Keep it exactly as written; moving a comma would
-// change the rhythm. The joke is 119 characters, inside
-// the 1-to-200 limit, with room to spare.
+// Delivery notes: the line is three short beats — ask, punchline,
+// verdict — and the punchline sits in the middle, so the last beat
+// is the son's silence, which is the real joke. Keep it exactly
+// as written; moving a comma would change the rhythm. The joke is
+// 125 characters, inside the 1-to-200 limit, with room to spare.
 
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -59,7 +53,7 @@ import { join } from "node:path";
 // scores the exact text, and even one changed character
 // would make this a different entry.
 const LINE =
-  "I asked my son if he wanted to hear a joke about construction. He said no. I told him anyway — I'm still working on it.";
+  "My son asked why the scarecrow won an award. I said, 'Because he was outstanding in his field.' He hasn't spoken to me since.";
 
 // Write the line plus a trailing newline to entry.txt.
 // The output directory comes from the harness; /output is
@@ -67,3 +61,6 @@ const LINE =
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, "entry.txt"), LINE + "\n", "utf8");
+
+// Revised once: the son's silence is the real joke — the pun is only
+// the setup for it. A father and a son, and the son has stopped talking.
